@@ -1,5 +1,4 @@
 const express = require('express')
-const algo = require('./algo')
 
 const port = 5000
 
@@ -129,8 +128,6 @@ app.get(`${route}/edad/:rango`, (req, res) => {
   res.status(200)
   res.json(estudiantesEnRango)
 })
-
-app.delete('/algo', algo.delete)
 
 app.listen(port, () => {
   console.log("Escuchando")
